@@ -55,6 +55,6 @@ cleanData <- merge(activity_label,sub_data,by = "activity_label",all.y = TRUE)
 # calculate average of all columns grouped by activity and subject
 aggData <- cleanData %>% group_by(activity_name,subject_id) %>% summarise_all(mean)
 
-write.table(aggData,"C:\\vijay\\Coursera\\UCI HAR Dataset\\tidy.txt")
+write.table(aggData,"C:\\vijay\\Coursera\\UCI HAR Dataset\\tidy.txt",row.names = FALSE)
 
 
